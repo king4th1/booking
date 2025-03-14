@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Hibachi Party Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Home Hibachi Experience</h1>
+        <p>Bring the excitement of hibachi dining to your home!</p>
+    </header>
+
+    <main>
+        <section class="chef-info">
+            <svg class="chef-avatar" viewBox="0 0 100 100">
+                <!-- Chef Hat -->
+                <path d="M25 35 Q50 15 75 35 Q80 25 75 20 Q65 15 50 15 Q35 15 25 20 Q20 25 25 35" fill="white" stroke="#333" stroke-width="2"/>
+                <!-- Face -->
+                <ellipse cx="50" cy="50" rx="20" ry="18" fill="#ffe0bd"/>
+                <!-- Hair -->
+                <path d="M30 45 Q35 35 45 40" fill="none" stroke="#333" stroke-width="2"/>
+                <path d="M70 45 Q65 35 55 40" fill="none" stroke="#333" stroke-width="2"/>
+                <!-- Eyes -->
+                <ellipse cx="42" cy="45" rx="3" ry="2" fill="#333"/>
+                <ellipse cx="58" cy="45" rx="3" ry="2" fill="#333"/>
+                <!-- Eyebrows -->
+                <path d="M39 42 Q42 40 45 42" fill="none" stroke="#333" stroke-width="1.5"/>
+                <path d="M55 42 Q58 40 61 42" fill="none" stroke="#333" stroke-width="1.5"/>
+                <!-- Smile -->
+                <path d="M42 55 Q50 60 58 55" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                <!-- Chef Uniform -->
+                <path d="M30 65 L35 100 L65 100 L70 65" fill="white" stroke="#333" stroke-width="2"/>
+                <!-- Collar -->
+                <path d="M30 65 L45 72 L50 65 L55 72 L70 65" fill="white" stroke="#333" stroke-width="2"/>
+                <!-- Buttons -->
+                <circle cx="50" cy="75" r="2" fill="#333"/>
+                <circle cx="50" cy="83" r="2" fill="#333"/>
+                <circle cx="50" cy="91" r="2" fill="#333"/>
+                <!-- Neckerchief -->
+                <path d="M45 72 L50 78 L55 72" fill="none" stroke="#ff6b35" stroke-width="3"/>
+            </svg>
+            <div class="chef-details">
+                <h2>Meet Chef Jerry</h2>
+                <span class="experience-badge">10 Years of Experience</span>
+                <p>With a decade of mastering the art of hibachi cooking, Chef Jerry brings the excitement and flavors of Japanese teppanyaki right to your home. His impressive knife skills, entertaining cooking style, and mouthwatering creations make every party unforgettable.</p>
+                <p>If you're looking to host the ultimate party experience, you can't go wrong with our professional hibachi service. Let Chef Jerry transform your gathering into a memorable culinary show!</p>
+                <button id="shareButton" class="share-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="18" cy="5" r="3"/>
+                        <circle cx="6" cy="12" r="3"/>
+                        <circle cx="18" cy="19" r="3"/>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    </svg>
+                    Share This Service
+                </button>
+            </div>
+        </section>
+
+        <section class="booking-form">
+            <h2>Book Your Hibachi Party</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests:</label>
+                    <input type="number" id="guests" min="4" max="20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="add-review">
+                <h3>Add Your Review</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewName">Name:</label>
+                        <input type="text" id="reviewName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rating">Rating:</label>
+                        <select id="rating" required>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                            <option value="2">2 Stars</option>
+                            <option value="1">1 Star</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="videoUpload">Share Your Experience (Video):</label>
+                        <input type="file" id="videoUpload" accept="video/*" capture="user">
+                        <p class="upload-hint">Maximum video size: 50MB</p>
+                    </div>
+
+                    <button type="submit">Submit Review</button>
+                </form>
+            </div>
+            
+            <div id="reviewsList">
+                <!-- Reviews will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: <span class="phone-number">(626) 460-0097</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
